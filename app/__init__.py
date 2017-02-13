@@ -16,7 +16,6 @@ def hear_all(message):
         userid = message.body["user"]
         username = find_username(userid, message._client.users)
 
-        slack = Slacker(TO_INCOMING_WEBHOOK_URL)
         post(text, TO_CHANNEL, username, ":{}_{}:".format(username[0], username[1:]))
 
 def find_username(userid, users):

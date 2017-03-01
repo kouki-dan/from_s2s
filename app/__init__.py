@@ -19,7 +19,7 @@ def hear_all(message):
         post(text, TO_CHANNEL, username, ":{}_{}:".format(username[0], username[1:]))
 
 def find_username(userid, users):
-    return users[userid].get("name", "")
+    return users[userid].get("name", "someone")
 
 def post(text, channel, name="bot", icon_emoji=':slack:'):
     requests.post(TO_INCOMING_WEBHOOK_URL, data = json.dumps({
